@@ -1,0 +1,27 @@
+def encrypt(message, shift_amount):
+    encrypted_message = ""
+
+    for character in message:
+        if character.isalpha():  # Check if the character is a letter
+            shift_base = 65 if character.isupper() else 97  # Determine ASCII base for uppercase or lowercase
+            encrypted_message += chr((ord(character) - shift_base + shift_amount) % 26 + shift_base)
+        else:
+            encrypted_message += character  # Insert non-alphabetic characters without change
+
+    return encrypted_message
+
+# Use Caesar cipher to decrypt messages
+def decrypt(encrypted_message, shift_amount):
+    return encrypt(encrypted_message, -shift_amount)
+
+# Get the message and shift value from  user
+user_message = input("Enter the message to encrypt or decrypt: ")
+shift_value = int(input("Please enter the shift value: "))
+
+# Encrypt/decrypt message
+encrypted_message = encrypt(user_message, shift_value)
+decrypted_message = decrypt(encrypted_message, shift_value)
+
+# Display results
+print(f"Encrypted message: {encrypted_message}")
+print(f"Decrypted message: {decrypted_message}")
