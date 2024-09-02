@@ -16,10 +16,7 @@ PentestPass is a Python-based tool that helps you assess the strength of your pa
 - **Python 3.x**: Make sure you have Python 3 installed on your machine. You can download it from [python.org](https://www.python.org/downloads/).
 
 ### Clone the Repository
-Clone this repository to your local machine using the following command:
-
-bash
-git clone https://github.com/yourusername/pentestpass.git
+Clone this repository to your local machine.
 
 # Install Required Packages
 
